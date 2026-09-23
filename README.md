@@ -7,7 +7,7 @@ By Irine Jeba | Tech Panda Academy, Chennai
 
 ## 📸 Image 1: The File Life Cycle - OPEN, WRITE, CLOSE
 
-![Python File Office - Open Write Close](images/python-file-office.png)
+![Python File Office - Open Write Close](images/)
 
 **What this image shows:**
 
@@ -24,23 +24,28 @@ my_file.write("The secret password is: Bananas123")
 ### 3. CLOSE (The Finish)
 ```python
 my_file.close()
-# Smart way - Auto close, no need to remember
+
+**Smart Way (Auto-Close):**
+```python
 with open("secret_agent_notes.txt", "w") as my_file:
     my_file.write("The secret password is: Bananas123")
+# No need to close - auto locked!
 
-## 📸 Image 2: The File Modes
+## 📸 Image 2: The 4 File Modes -r, w, a, x 
 # r - Read
 with open("notes.txt", "r") as f:
     print(f.read())
 
-# w - Write (Overwrite)
+# w - Overwrite
 with open("notes.txt", "w") as f:
     f.write("New content - old deleted!")
 
-# a - Append (Add at end)
+# a - Append
 with open("notes.txt", "a") as f:
-    f.write("\nThis line is glued at end")
+    f.write("\nThis line glued at end")
 
-# x - Exclusive Create (Safe create)
+# x - Exclusive Create
+with open("new_secret.txt", "x") as f:
+    f.write("Created only once!")
 with open("new_secret.txt", "x") as f:
     f.write("Created only once!")
