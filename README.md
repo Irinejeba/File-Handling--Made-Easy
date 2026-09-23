@@ -1,44 +1,59 @@
-# File-Handling--Made-Easy
-Cartoonic depiction of File Handling codes &amp; modes.
-# 🐍 Python File Handling - Visualization
-By Irine Jeba | Tech Panda Academy, Chennai
+### 🐍 File Handling Made Easy - Full Code by Irine Jeba
 
-> Two powerful visuals that made File Handling easy to remember forever!
+## Image 1: OPEN -> WRITE -> CLOSE
 
-## 📸 Image 1: The File Life Cycle - OPEN, WRITE, CLOSE
-### 1. OPEN (The Start)
-```python
+![Image 1 - Lifecycle](File%20Handling%20codes.jpg)
+
+### 1. OPEN - Blue Staff takes file from OPEN basket
 my_file = open("secret_agent_notes.txt", "w")
+print("1. File OPENED")
 
-### 2. WRITE (The Action)
-```python
+### 2. WRITE - Middle Staff writes secret
 my_file.write("The secret password is: Bananas123")
+print("2. Data WRITTEN")
 
-### 3. CLOSE (The Finish)
-```python
+### 3. CLOSE - Third Staff locks and puts in OUT basket
 my_file.close()
+print("3. File CLOSED\n")
 
-**Smart Way (Auto-Close):**
-```python
+### Pro Tip - Smart way (auto-close) - No need to close manually
 with open("secret_agent_notes.txt", "w") as my_file:
-    my_file.write("The secret password is: Bananas123")
-# No need to close - auto locked!
+    my_file.write("The secret password is: Bananas123 - Smart way")
+print("Smart way done - Auto closed!\n")
 
-## 📸 Image 2: The 4 File Modes -r, w, a, x 
-# r - Read
-with open("notes.txt", "r") as f:
-    print(f.read())
+## Image 2: 4 Modes - r, w, a, x
 
-# w - Overwrite
+![Image 2 - Modes](File%20Handling%20modes.jpg)
+
+###  r - Inspector - READ ONLY 
+print("--- r - Inspector (read only) ---")
+with open("secret_agent_notes.txt", "r") as f:
+    content = f.read()
+    print(f.read = {content}\n")
+
+###  w - Vaporizer - WRITE (deletes old) 
+print("--- w - Vaporizer (deletes old, writes new) ---")
 with open("notes.txt", "w") as f:
     f.write("New content - old deleted!")
+print("Created notes.txt with w mode\n")
 
-# a - Append
+###  a - Continuator - APPEND (keeps old) 
+print("--- a - Continuator (keeps old, adds at end) ---")
 with open("notes.txt", "a") as f:
-    f.write("\nThis line glued at end")
+    f.write("\nThis line is glued at end")
+print("Appended to notes.txt with a mode\n")
 
-# x - Exclusive Create
-with open("new_secret.txt", "x") as f:
-    f.write("Created only once!")
-with open("new_secret.txt", "x") as f:
-
+###  x - Perfectionist - EXCLUSIVE CREATE
+print("--- x - Perfectionist (new only) ---")
+try:
+    with open("new_secret.txt", "x") as f:
+        f.write("Created only once!")
+    print("Created new_secret.txt with x mode - First time success")
+except FileExistsError:
+    print("File already exists! x mode prevents overwrite - Safe!")
+    
+### Final check - read everything
+print("\n=== Final Check ===")
+with open("notes.txt", "r") as f:
+    print("notes.txt content:")
+    print(f.read())
