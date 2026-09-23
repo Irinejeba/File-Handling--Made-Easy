@@ -1,18 +1,11 @@
 # File-Handling--Made-Easy
 Cartoonic depiction of File Handling codes &amp; modes.
-# 🐍 Python File Handling - Visual Cookie Book
+# 🐍 Python File Handling - Visualization
 By Irine Jeba | Tech Panda Academy, Chennai
 
 > Two powerful visuals that made File Handling easy to remember forever!
 
 ## 📸 Image 1: The File Life Cycle - OPEN, WRITE, CLOSE
-
-![Python File Office - Open Write Close](images/File Handling codes.jpg)
-
-**What this image shows:**
-
-Imagine Python file handling is a government office with 3 staff members managing a Hard Drive cabinet.
-
 ### 1. OPEN (The Start)
 ```python
 my_file = open("secret_agent_notes.txt", "w")
@@ -48,4 +41,4 @@ with open("notes.txt", "a") as f:
 with open("new_secret.txt", "x") as f:
     f.write("Created only once!")
 with open("new_secret.txt", "x") as f:
-    f.write("Created only once!")
+
