@@ -7,7 +7,7 @@ By Irine Jeba | Tech Panda Academy, Chennai
 
 ## 📸 Image 1: The File Life Cycle - OPEN, WRITE, CLOSE
 
-![Python File Office - Open Write Close](images/)
+![Python File Office - Open Write Close](images/File Handling codes.jpg)
 
 **What this image shows:**
 
